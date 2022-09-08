@@ -1,0 +1,92 @@
+* Fall 2022 - Lab 03
+
+* Last name:
+
+* First name:
+
+* GitHub username:
+
+* Notes:
+
+
+
+* General instructions:
+- Fill in your name and GitHub username on top.
+- Use the Notes section to add any notes to the instructor.
+- The main lab description can be found here:
+  https://maryash.github.io/135/labs/lab_03.html
+
+
+* Specific instructions for lab 03
+
+** Overall changes
+
+For this lab, you will create a program with multiple files and us
+~make~ to control compilation. There will be a sample ~Makefile~ along
+with other starter files in this repo. Use the Makefiles we created
+in class and are currently in classcode as samples and references.
+
+In addition to adding your ~.cpp~ files to the repo make sure to add
+the reservoir level *tsv* file you downloaded as well.
+
+
+** Task A
+
+Write a program that consists of two .cpp files plus any supporting
+files. One will be named ~main.cpp~ and it will drive your
+program. It will contain the ~main~ function. The other file should be
+named ~reservoir.cpp~ and should contain a function with the prototype
+~double get_east_storage(std::string date)~.
+
+The ~get_east_storage~ function should accept a std::string specifying a
+date and should return the East Basin storage for that day. Your
+program should call and test this function from main. There should be
+no keyboard input but the output should illustrate that the function
+works correctly.
+
+*Note:* This assignment template contains a skeleton that includes the
+ Makefile, main.cpp, and reservoir.h and reservoir.cpp. You are
+ expected to fill in the functions and calls.
+
+*Note:* The get_east_storage function should open and read the data
+file.
+
+** Task B
+
+Add the following two functions to ~reservoir.cpp/h~
+
+1. double get_min_east() - this function should return the minimum
+   storage in the East basin in the 2018.
+2. double get_max_east() - this function should return the maximum
+   storage in the East basin in the 2018.
+
+Test these by calling them from main and printing out results. As with
+task A, there should be no keyboard input. 
+
+*Note:* Like in Task A, you will have to read the file completely in
+these functions.
+
+** Task C
+
+Add a function ~std::string compare_basins(std::string date)~ that 
+will return ~East~ if the East basin was higher on the specified date
+and ~West~ if the West was higher. It should return ~Equal~ if the
+values were the same.
+
+As with the other tasks, this function should read in the file and
+there should be no keyboard input. Remember to test sufficiently from
+main.
+
+
+** Task D
+
+For this task, add new files, ~reverseorder.cpp~ and
+~reverseorder.h~. You will have to modify the ~Makefile~
+appropriately. 
+
+In these files create a function ~void reverse_oreder(std::string
+date1, std::string date2)~. This function should print out the West
+basin elevation for all days in the interval in reverse chronological
+order.
+
+Test from main.
