@@ -4,14 +4,18 @@
 
 int main()
 {
-  std::cout << "\nTask A \n";
+  std::cout << "\n Task A \n";
   std::cout << "Entered date: 01/01/2018 \n";
   get_east_storage("01/01/2018");
 
-  std::cout << "\nTask B \n";
+  std::cout << "\n Task B \n";
   get_min_east();
   get_max_east();
 
+  std::cout << "\n Task C \n";
+  compare_basins("01/01/2018");
+  compare_basins("02/01/2018");
+  compare_basins("03/01/2018");
   
   return 0;
 }
