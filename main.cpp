@@ -1,6 +1,7 @@
 // add your code as appropriate 
 #include <iostream>
 #include "reservoir.h"
+#include "reverseorder.h"
 
 int main()
 {
@@ -17,5 +18,8 @@ int main()
   compare_basins("02/01/2018");
   compare_basins("03/01/2018");
   
+  std::cout << "\n Task D \n";
+  reverse_order("05/29/2018", "06/02/2018");
+
   return 0;
 }
